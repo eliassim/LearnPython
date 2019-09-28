@@ -2,7 +2,7 @@ import turtle
 # Initielize turtile object 
 tw = turtle.Screen()
 cur = turtle.Turtle()
-cur.color("green")
+cur.color("red")
 cur.pensize(3)
 cur.pu()
 
