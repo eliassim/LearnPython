@@ -1,4 +1,4 @@
-import turtle
+import turtle, itertools
 # Initielize turtile object 
 tw = turtle.Screen()
 cur = turtle.Turtle()
@@ -12,6 +12,119 @@ def  space():
   cur.pu()
   cur.fd(40)
   cur.pd()
+
+def A():
+  cur.fd(5)
+  cur.fd(-10)
+  cur.lt(70)
+  cur.bk(20)
+  cur.fd(42)
+  cur.rt(145)
+  cur.fd(40)
+  cur.bk(21)
+  cur.lt(75)
+  cur.bk(10)
+
+def B():
+    cur.lt(90)
+    cur.bk(20)
+    cur.fd(40)
+    cur.rt(90)
+    cur.fd(10)
+    for _ in itertools.repeat(None, 180):
+        cur.rt(1)
+        cur.fd(0.18)
+    cur.fd(10)
+    cur.bk(10)
+    cur.lt(180)
+    for _ in itertools.repeat(None, 180):
+        cur.rt(1)
+        cur.fd(0.18)
+    cur.fd(10)
+    cur.rt(90)
+    cur.fd(20)
+    cur.rt(90)
+#good
+def C():
+    print("NA")
+
+def D():
+    cur.lt(90)
+    cur.fd(20)
+    cur.rt(90)
+    cur.fd(10)
+    for _ in itertools.repeat(None, 180):
+        cur.rt(1)
+        cur.fd(0.36)
+    cur.fd(10)
+    cur.rt(90)
+    cur.fd(20)
+    cur.rt(90)
+#good
+
+def E():
+  cur.fd(20)
+  cur.bk(20)
+  cur.lt(90)
+  cur.fd(20)
+  cur.lt(-90)
+  cur.fd(20)
+  cur.bk(20)
+  cur.lt(-90)
+  cur.fd(40)
+  cur.lt(90)
+  cur.fd(20)
+  cur.bk(20)
+  cur.lt(90)
+  cur.fd(20)
+  cur.lt(-90)
+#good
+def F():
+  cur.fd(20)
+  cur.bk(20)
+  cur.lt(90)
+  cur.fd(20)
+  cur.lt(-90)
+  cur.fd(20)
+  cur.bk(20)
+  cur.lt(-90)
+  cur.fd(40)
+  cur.lt(180)
+  cur.fd(20)
+  cur.lt(-90)
+#good
+def G():
+    cur.up()
+    cur.fd(15)
+    cur.pd()
+    cur.fd(15)
+    cur.rt(90)
+    cur.fd(15)
+    cur.rt(45)
+    for _ in itertools.repeat(None, 230):
+        cur.rt(1)
+        cur.fd(0.36)
+    cur.up()
+    cur.rt(87)
+    cur.fd(20)
+    cur.lt(93)
+#good
+
+def H():
+  cur.fd(10)
+  cur.lt (90)
+  cur.fd(20)
+  cur.bk(40)
+  cur.fd(20)
+  cur.lt(90)
+  cur.fd(20)
+  cur.rt(90)
+  cur.fd(20)
+  cur.bk(40)
+  cur.fd(20)
+  cur.rt(90)
+  cur.fd(10)
+#good
 def I():
   cur.lt(90)
   cur.fd(20)
@@ -28,7 +141,48 @@ def I():
   cur.lt(90)
   cur.fd(20)
   cur.rt(90)
-
+#good
+def J():
+    cur.up()
+    cur.fd(10)
+    cur.lt(90)
+    cur.pd()
+    cur.fd(30)
+    cur.rt(180) 
+    cur.fd(40)
+    for _ in itertools.repeat(None, 180):
+        cur.rt(1)
+        cur.fd(0.15)
+    cur.up()
+    cur.fd(20)
+    cur.rt(90)
+    cur.fd(17)
+    cur.pd()
+    cur.lt(90)
+    cur.fd(20)
+    cur.lt(90)
+    cur.fd(10)
+    cur.bk(20)
+    cur.fd(10)
+    cur.lt(90)
+    cur.fd(10)
+    cur.lt(90)
+#good
+def K():
+    cur.lt(90)
+    cur.fd(20)
+    cur.bk(20)
+    cur.rt(45)
+    cur.fd(25)
+    cur.bk(25)
+    cur.rt(90)
+    cur.fd(25)
+    cur.bk(25)
+    cur.rt(45)
+    cur.fd(20)
+    cur.bk(20)
+    cur.lt(90)
+#good
 def L():
   cur.lt(90)
   cur.fd(20)
@@ -39,16 +193,60 @@ def L():
   cur.lt(-90)
   cur.bk(20)
   cur.lt(90)
-def A():
-  cur.fd(5)
-  cur.fd(-10)
-  cur.lt(70)
+#good
+def M():
+    print("NA")
+def N():
+    print("NA")
+def O():
+  cur.up()
+  cur.fd(10)
+  cur.rt(90)
+  cur.fd(20)
+  cur.rt(-90)
+  cur.pd()
+  cur.circle(20)
+  cur.rt(-90)
+  cur.up()
+  cur.fd(20)
+  cur.pd()
+  cur.rt(90)
+#good
+def P():
+  cur.rt(90)
+  cur.fd(20)
+  cur.bk(40)
+  cur.lt(90)
+  cur.fd(10)
+  for _ in itertools.repeat(None, 180):
+    cur.rt(1)
+    cur.fd(0.15)
+  cur.fd(10)
+  cur.lt(90)
+  cur.fd(4)
+  cur.lt(90)
+#good
+def Q():
+    print("NA")
+
+def R():
+  cur.lt(90)
   cur.bk(20)
-  cur.fd(42)
-  cur.rt(145)
   cur.fd(40)
-  cur.bk(21)
-  cur.lt(75)
+  cur.rt(90)
+  cur.fd(10)
+  for _ in itertools.repeat(None, 180):
+    cur.rt(1)
+    cur.fd(0.18)
+  cur.fd(10)
+  cur.bk(5)
+  cur.lt(135)
+  cur.fd(26)
+  cur.bk(26)
+  cur.lt(45)
+  cur.bk(5)
+
+
 def S():
   cur.fd(-10)
   cur.lt(-90)
@@ -68,21 +266,89 @@ def S():
   cur.rt(-90)
   cur.pd()
   cur.fd(20)
-
-def E():
-  for i in range(2):
-    cur.fd(20)
-    cur.bk(20)
-    cur.rt(90)
-    cur.fd(20)
-    cur.lt(90)
-  cur. fd(20)
+#good
+def T ():
+  cur.up()
+  cur.bk(5)
+  cur.pd()
+  cur.lt(90)
+  cur.fd(20)
+  cur.lt(90)
+  cur.fd(10)
   cur.bk(20)
-  cur.rt(90)
-  cur.pu()
+  cur.fd(10)
+  cur.lt(90)
+  cur.fd(40)
   cur.bk(20)
   cur.lt(90)
-def david():
+  cur.up()
+  cur.bk(5)
+  cur.pd()
+#good
+def U ():
+  cur.up()
+  cur.fd(20)
+  cur.lt(90)
+  cur.fd(17)
+  cur.lt(180)
+  cur.pd()
+  cur.fd(24)
+  for _ in itertools.repeat(None, 180):
+    cur.rt(1)
+    cur.fd(0.25)
+  cur.fd(24)
+  cur.up()
+  cur.rt(90)
+  cur.fd(20)
+  cur.rt(90)
+  cur.fd(20)
+  cur.lt(90)
+#good
+def V():
+    cur.up()
+    cur.fd(10)
+    cur.lt(75)
+    cur.pd()
+    cur.fd(23)
+    cur.bk(46)
+    cur.lt(25)
+    cur.fd(46)
+    cur.bk(23)
+    cur.rt(100)
+#good
+def W():
+    print("NA")
+def X ():
+  cur.lt(45)
+  cur.fd(26)
+  cur.bk(52)
+  cur.fd(26)
+  cur.lt(-90)
+  cur.fd(26)
+  cur.bk(52)
+  cur.fd(26)
+  cur.lt(45)
+#good
+def Y():
+    print("NA")
+def Z ():
+  cur.lt(45)
+  cur.fd(25)
+  cur.lt(135)
+  cur.fd(40)
+  cur.bk(40)
+  cur.lt(45)
+  cur.fd(50)
+  cur.lt(135)
+  cur.fd(40)
+  cur.bk(20)
+  cur.lt(90)
+  cur.up()
+  cur.fd(20)
+  cur.lt(-90)
+#good
+
+def DAVID():
   cur.lt(90)
   cur.fd(20)
   cur.bk(30)
@@ -93,21 +359,20 @@ def david():
   cur.up()
   cur.fd(20)
   cur.rt(90)
-E()
-space()
-L()
-space()
-I()
-space()
-A()
-space()
-S()
-space()
-S()
-space()
-cur.pu()
-cur.fd(-10)
-cur.pd()
-I()
-space()
-david()
+
+def printMenu():
+  return input("Please select a letter to print.\n" + 
+  "For example type a ot A to print A.\nType 1 to quit.\n\n")
+  
+
+# Z()
+# space()
+# P()
+# space()
+# J()
+while True:
+  ans = printMenu().upper()
+  print("\nWill print: " + ans)
+  locals()[ans]()
+  space()
+input("Press Enter to continue...")
