@@ -6,6 +6,7 @@ cur.color("green")
 cur.pensize(3)
 cur.pu()
 
+
 cur.setpos(-250,100)
 cur.pd()
 def  space():
