@@ -5,7 +5,7 @@ cur = turtle.Turtle()
 cur.color("green")
 cur.pensize(3)
 cur.pu()
-
+cur.speed(0)
 cur.setpos(-250,100)
 cur.pd()
 def  space():
@@ -45,8 +45,27 @@ def B():
     cur.fd(20)
     cur.rt(90)
 #good
+#לתקן את G
 def C():
-    print("NA")
+    cur.up()
+    cur.fd(30)
+    cur.rt(90)
+    for _ in itertools.repeat(None, 45):
+      cur.fd(0.35)
+      cur.rt(1)
+    cur.pd()
+    for _ in itertools.repeat(None, 270):
+      cur.fd(0.35)
+      cur.rt(1)
+    cur.up()
+    for _ in itertools.repeat(None, 45):
+      cur.fd(0.35)
+      cur.rt(1)
+    cur.lt(90)
+    cur.up()
+    cur.bk(20)
+
+    
 
 def D():
     cur.lt(90)
@@ -56,10 +75,13 @@ def D():
     for _ in itertools.repeat(None, 180):
         cur.rt(1)
         cur.fd(0.36)
-    cur.fd(10)
+    cur.fd(9)
     cur.rt(90)
     cur.fd(20)
     cur.rt(90)
+    cur.up()
+    cur.fd(10)
+    cur.pd()
 #good
 
 def E():
@@ -102,12 +124,19 @@ def G():
     cur.fd(15)
     cur.rt(45)
     for _ in itertools.repeat(None, 230):
-        cur.rt(1)
-        cur.fd(0.36)
+      cur.rt(1)
+      cur.fd(0.36)
+    for _ in itertools.repeat(None,45):
+      cur.rt(1)
+      cur.fd(0.36)
+    for _ in itertools.repeat(None,45):
+      cur.rt(-1)
+      cur.fd(-0.36)
     cur.up()
     cur.rt(87)
     cur.fd(20)
-    cur.lt(93)
+    cur.lt(91.75)
+    cur.fd(1)
 #good
 
 def H():
@@ -147,9 +176,9 @@ def J():
     cur.fd(10)
     cur.lt(90)
     cur.pd()
-    cur.fd(30)
+    cur.fd(20)
     cur.rt(180) 
-    cur.fd(40)
+    cur.fd(30)
     for _ in itertools.repeat(None, 180):
         cur.rt(1)
         cur.fd(0.15)
@@ -159,13 +188,13 @@ def J():
     cur.fd(17)
     cur.pd()
     cur.lt(90)
-    cur.fd(20)
+    cur.fd(10)
     cur.lt(90)
     cur.fd(10)
     cur.bk(20)
     cur.fd(10)
     cur.lt(90)
-    cur.fd(10)
+    cur.fd(20)
     cur.lt(90)
 #good
 def K():
@@ -195,9 +224,37 @@ def L():
   cur.lt(90)
 #good
 def M():
-    print("NA")
+    cur.up()
+    cur.fd(10)
+    cur.pendown()
+    cur.lt(45)
+    cur.fd(30)
+    cur.rt(135)
+    cur.fd(40)
+    cur.rt(90)
+    cur.up()
+    cur.fd(40)
+    cur.rt(90)
+    cur.pendown()
+    cur.fd(40)
+    cur.rt(135)
+    cur.fd(30)
+    cur.lt(45)
 def N():
-    print("NA")
+  cur.up()
+  cur.fd(15)
+  cur.lt(90)
+  cur.pendown()
+  cur.fd(20)
+  cur.bk(40)
+  cur.lt(35)
+  cur.fd(50)
+  cur.lt(145)
+  cur.fd(40)
+  cur.bk(40)
+  cur.lt(35)
+  cur.fd(25)
+  cur.lt(55)
 def O():
   cur.up()
   cur.fd(10)
@@ -227,8 +284,26 @@ def P():
   cur.lt(90)
 #good
 def Q():
-    print("NA")
-
+  cur.up()
+  cur.fd(30)
+  cur.lt(90)
+  cur.pendown()
+  for _ in itertools.repeat(None, 315):
+    cur.fd(0.35)
+    cur.lt(1)
+  cur.lt(90)
+  cur.fd(15)
+  cur.bk(30)
+  cur.fd(15)
+  cur.rt(90)
+  for _ in itertools.repeat(None, 45):
+    cur.fd(0.35)
+    cur.lt(1)
+  cur.rt(90)
+  cur.up()
+  cur.fd(-10)
+  cur.pd()
+ 
 def R():
   cur.lt(90)
   cur.bk(20)
@@ -263,9 +338,11 @@ def S():
   cur.lt(-90)
   cur.up()
   cur.fd(-20)
-  cur.rt(-90)
+  cur.lt(90)
   cur.pd()
   cur.fd(20)
+  cur.up()
+  cur.fd(-15)
 #good
 def T ():
   cur.up()
@@ -317,42 +394,65 @@ def V():
     cur.rt(100)
 #good
 def W():
-  cur.up()
-  cur.bk(30)
-  cur.lt(90)
-  cur.fd(20)
-  cur.pd()
-  cur.rt(150)
-  cur.fd(23)
-
+    cur.up()
+    cur.fd(10)
+    cur.pendown()
+    cur.rt(45)
+    cur.fd(30)
+    cur.lt(135)
+    cur.fd(40)
+    cur.lt(90)
+    cur.up()
+    cur.fd(40)
+    cur.lt(90)
+    cur.pendown()
+    cur.fd(40)
+    cur.lt(135)
+    cur.fd(30)
+    cur.rt(45)
 def X ():
-  cur.lt(45)
+  cur.lt(60)
   cur.fd(26)
   cur.bk(52)
   cur.fd(26)
-  cur.lt(-90)
+  cur.lt(60)
   cur.fd(26)
   cur.bk(52)
   cur.fd(26)
-  cur.lt(45)
+  cur.lt(-120)
 #good
 def Y():
-    print("NA")
+    cur.up()
+    cur.fd(10)
+    cur.pd()
+    cur.lt(45)
+    for _ in itertools.repeat(None, 2):
+      cur.fd(27)
+      cur.fd(-27)
+      cur.lt(90)
+    cur.lt(45)
+    cur.fd(20)
+    cur.fd(-20)
+    cur.lt(90)
 def Z ():
-  cur.lt(45)
+  cur.lt(55)
   cur.fd(25)
-  cur.lt(135)
-  cur.fd(40)
-  cur.bk(40)
-  cur.lt(45)
+  cur.bk(50)
   cur.fd(50)
-  cur.lt(135)
-  cur.fd(40)
-  cur.bk(20)
-  cur.lt(90)
+  cur.lt(125)
+  cur.fd(30)
+  cur.bk(30)
   cur.up()
-  cur.fd(20)
-  cur.lt(-90)
+  cur.lt(90)
+  cur.fd(40)
+  cur.pd()
+  cur.rt(90)
+  cur.fd(30)
+  cur.rt(125)
+  cur.fd(25)
+  cur.rt(55)
+  cur.up()
+  cur.bk(10)
 #good
 
 def DAVID():
