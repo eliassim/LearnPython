@@ -6,6 +6,7 @@ cur.color("green")
 cur.pensize(3)
 cur.pu()
 
+
 cur.setpos(-250,100)
 cur.pd()
 def  space():
@@ -317,6 +318,7 @@ def V():
     cur.rt(100)
 #good
 def W():
+<<<<<<< HEAD
   cur.up()
   cur.bk(30)
   cur.lt(90)
@@ -325,6 +327,9 @@ def W():
   cur.rt(150)
   cur.fd(23)
 
+=======
+    print("NA")
+>>>>>>> 0344b1cdf044e9eb0cda1caf6fcb44a46be9be15
 def X ():
   cur.lt(45)
   cur.fd(26)
