@@ -1,17 +1,50 @@
 import random ,time 
+from tkinter import messagebox
+class Score:
+    PointsArr = [None] * 2
+    def __init__(self):
+        self.PointsArr[0] = 0
+        self.PointsArr[1] = 0
+    
+    def addPoints(self, player, points):
+        self.PointsArr[player-1] += points
+    
+    def addPoint(self, player):
+        self.PointsArr[player-1] += 1
+    
+    def getScore(self, player):
+        return self.PointsArr[player-1]
+
 def help():
-    print("Hi my name is bot\nHere is an explanation of what all this software is \nif you want to continue writing 'yes' if you do not write 'no'")
+    print("Hi my name is bot\nHere is an explanation of what all this software is \nif you want to continue writing 'yes' if you do not write 'no'\nif you wont to start play write 'start'")
     Continued = input("")
     if Continued == 'yes':
-        print("ok Let's \nstart the software is basically a competition between two contestants \nboth competing in 3 games which ultimately determines who won most of\n(the games work in random order)")
+        print("ok let's \nstart the software is basically a competition between two contestants \nboth competing in 3 games which ultimately determines who won most of\n(the games work in random order)")
         print("game 1:\ngame 1 is the famous game 'hang man' \nI dont think that I need to explain how you playing the game")
         print("player 1 is chooses a word while player 2 close his eyes and Then he has to guess the word \nhe has 10 guesses if he managed to guess\nthe word he won if not the other one won  ")
         print("\n\ngame 2:\ngame 2 called 'test in math'\nin the game the software will give you 5 Account questions that their activity selected at random \n(there was more chance of a connection than any other action)")
         print("\n\ngame 3:\ngame 3 called 'X O' yes onther famous game in the game you need tם \nDesign on the board in a row / column / diagonal of X or O")
+        say = input("if you wont to start play write 'start'")
+        if say == 'start':
+            print("so let's start\nFirst of all I wont to now your names")
+        else :
+            bot_start()
+    elif Continued == 'start' :
+        print("so let's start\nFirst of all I wont to now your names")
     else :
-        print("okk")
+        bot_start()
 
+def bot_start():
+    print("Hi \nmy name is bot\nif you wont to start plase write 'start'\nif you wont an explanation plase wrait 'help'")
+    Continued_1 = input("")
+    if Continued_1 == 'start':
+        print("so let's start\nFirst of all I wont to now your names")
+    elif Continued_1 == 'help':
+        help()
 def game_1():
+
+    print("now we going to play 'hang man'")
+    print(f"player 1 {name_2} close your eyes until player 2 {name_1} write a word \nbut the word need to be with 3 - 7 letters and need to be a real word")
     word = input("enter your word...")
     show_word = '_' * len(word)
     print('\n' * 100)
@@ -29,42 +62,28 @@ def game_1():
             show_word = ''.join(c if c.lower() in guesses_letters else '_' for c in word )
             if '_' not in show_word:
                 print(f'you guessed the word {word}')
+                gameScore.addPoint(1)
                 break
         if len(guess) > 1:
             if guess == word:
-                print(f'you guess right the word is {word}')
+                print(f'you guess right, the word is {word}\n{name_2} you are the winer of this copotion')
+                gameScore.addPoint(1)
                 break
         else:
             print(f"sorry {guess} isn't the word")
         guesses-=1
         if not guesses:
-            print(f'sorry the game has ended.the word is {word}')
+            print(f' sorry the game has ended.the word is {word}\n{name_1} you are the winer of this copotion')
+            gameScore.addPoint(2)
             break
-def game_4():
-    x = 0
-    t = 0
-    n = 1
-    Player_1_score = 0
-    Player_2_score = 0
-    while x == 50 :
-        num = int(input('enter num...'))
-        if n == num or str(num) == 'boom':
-            t += 1
-        else:
-            print("Sorry you rong")
-            if num % 2 == 1:
-                Player_2_score += 1
-            else :
-                Player_1_score += 1
-        x += 1
-        n += 1
+        
 
-
-def game_3():
-    shape = (2, 3, 4, 5, 6, 10, 12, 15, 30)
-    Score_player_1 = 0
+def game_2():
     Score_player_2 = 0
-    print("turn: player 1")
+    Score_player_1 = 0 
+    input("we are going to play 'test in muth' plase press 'eneter' to start")
+    shape = (2, 3, 4, 5, 6, 10, 12, 15, 30)
+    print(f"turn: player 1 {name_2}")
     def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
@@ -127,7 +146,7 @@ def game_3():
 
 
     Score_player_2 = 0
-    print("turn: player 2")
+    print(f"turn: player 2 {name_1}")
     def time_convert_2(sec):
         mins = sec // 60
         sec = sec % 60
@@ -185,12 +204,17 @@ def game_3():
     time_convert_2(time_lapsed_2)
     t2 = int(round(time_lapsed_2))
     Grade_2 = (Score_player_2 - t2)
-    print(f" your right in {r} Answers so\n you get {Score_player_2} points but you wasted (Rounded of course) {t} Seconds so you get {Grade_1} points")
+    print(f" your right in {r} Answers so\n you get {Score_player_2} points but you wasted (Rounded of course) {t} Seconds so you get {Grade_2} points")
     if Grade_1 > Grade_2:
         print("player 2 win this stage")
+        gameScore.addPoint(1)
+    elif Grade_2 == Grade_1:
+        print("you both get the same Grade")
     else :
         print("player 1 win this stage")
-def game_2():
+        gameScore.addPoint(2)
+def game_3():
+    input("Now we are going to play X O\nplase Press 'eneter' to start ")
     class game:
         def __init__(self, player_1, player_2):
             self.board = board()
@@ -219,6 +243,10 @@ def game_2():
             print(self.board.to_string())
             if is_winner:
                 print(f'Well done {corrent_player.name} you win !')
+                if corrent_player.name == name_1:
+                    gameScore.addPoint(2)
+                else :
+                    gameScore.addPoint(1)
             else:
                 print("Sorry we have draw")
 
@@ -255,4 +283,33 @@ def game_2():
             self.maker = maker
 
 
-    game(player('bob','x'), player('moshe','o')).play()
+    game(player(name_2,'X'), player(name_1,'O')).play()
+def bot_middle():
+    print(f"ok \n {name_2} you are player 1\n{name_1} you are player 2")
+    a = [1, 2, 3]
+    for x in range(3):
+        order = random.randint(0, len(a)-1)
+        print("The array is: ", a, ", Random num is: ",order,", Value (game number) is: ",a[order])
+        if a[order] == 1:
+            game_1()
+        if a[order] == 2:
+            game_2()
+        if a[order] == 3:
+            game_3()
+        a.pop(order)
+    bot_final()
+def bot_final():
+    print("so the winner is...\n")
+    if gameScore.getScore(1) > gameScore.getScore(2):
+        messagebox.showinfo("Congratulations", "player 1 win!!!")
+    elif gameScore.getScore(1) < gameScore.getScore(2):
+        messagebox.showinfo("Congratulations", "player 2 win!!!")
+    else:
+        messagebox.showinfo("draw", "player 2 win and player 1 have the same scoring")
+
+gameScore = Score()
+print("test func: score is: ",gameScore.getScore(1))
+bot_start()
+name_1 = input("plase eneter the first name...")
+name_2 = input("ok plase eneter the second name...")
+bot_middle()
