@@ -289,7 +289,6 @@ def bot_middle():
     a = [1, 2, 3]
     for x in range(3):
         order = random.randint(0, len(a)-1)
-        print("The array is: ", a, ", Random num is: ",order,", Value (game number) is: ",a[order])
         if a[order] == 1:
             game_1()
         if a[order] == 2:
@@ -308,7 +307,6 @@ def bot_final():
         messagebox.showinfo("draw", "player 2 win and player 1 have the same scoring")
 
 gameScore = Score()
-print("test func: score is: ",gameScore.getScore(1))
 bot_start()
 name_1 = input("plase eneter the first name...")
 name_2 = input("ok plase eneter the second name...")
