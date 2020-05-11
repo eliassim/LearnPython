@@ -111,19 +111,19 @@ def game_2():
             Answer = int(input("enter your answer..."))
 
         elif action == 3:
-            else:
-            x = 60
-            y = random.choice(shape)
-            the_exercise  = x / y
-
-            print(f"How mach is {x} / {y}")
-            Answer = int(input("enter your answer...")
-        else :
+    
             x = random.randint(1, 100)
             y = random.randint(1, 100)
             the_exercise  = x + y
 
             print(f"How mach is {x} + {y}")
+            Answer = int(input("enter your answer..."))
+        else:
+            x = 60
+            y = random.choice(shape)
+            the_exercise  = x / y
+
+            print(f"How mach is {x} / {y}")
             Answer = int(input("enter your answer..."))
 
         end_time = time.time()
@@ -174,19 +174,19 @@ def game_2():
             Answer = int(input("enter your answer..."))
 
         elif action == 3:
-            else:
-            x = 60
-            y = random.choice(shape)
-            the_exercise  = x / y
-
-            print(f"How mach is {x} / {y}")
-            Answer = int(input("enter your answer...")
-        else :
+    
             x = random.randint(1, 100)
             y = random.randint(1, 100)
             the_exercise  = x + y
 
             print(f"How mach is {x} + {y}")
+            Answer = int(input("enter your answer..."))
+        else:
+            x = 60
+            y = random.choice(shape)
+            the_exercise  = x / y
+
+            print(f"How mach is {x} / {y}")
             Answer = int(input("enter your answer..."))
 
         end_time = time.time()
@@ -300,9 +300,9 @@ def bot_middle():
 def bot_final():
     print("so the winner is...\n")
     if gameScore.getScore(1) > gameScore.getScore(2):
-        messagebox.showinfo("Congratulations", "player 1 win!!!")
+        messagebox.showinfo(f"Congratulations player 1 win!!!")
     elif gameScore.getScore(1) < gameScore.getScore(2):
-        messagebox.showinfo("Congratulations", "player 2 win!!!")
+        messagebox.showinfo(f"Congratulations player 2 win!!!")
     else:
         messagebox.showinfo("draw", "player 2 win and player 1 have the same scoring")
 
