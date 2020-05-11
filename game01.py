@@ -111,19 +111,19 @@ def game_2():
             Answer = int(input("enter your answer..."))
 
         elif action == 3:
-    
-            x = random.randint(1, 100)
-            y = random.randint(1, 100)
-            the_exercise  = x + y
-
-            print(f"How mach is {x} + {y}")
-            Answer = int(input("enter your answer..."))
-        else:
+            else:
             x = 60
             y = random.choice(shape)
             the_exercise  = x / y
 
             print(f"How mach is {x} / {y}")
+            Answer = int(input("enter your answer...")
+        else :
+            x = random.randint(1, 100)
+            y = random.randint(1, 100)
+            the_exercise  = x + y
+
+            print(f"How mach is {x} + {y}")
             Answer = int(input("enter your answer..."))
 
         end_time = time.time()
@@ -174,19 +174,19 @@ def game_2():
             Answer = int(input("enter your answer..."))
 
         elif action == 3:
-    
-            x = random.randint(1, 100)
-            y = random.randint(1, 100)
-            the_exercise  = x + y
-
-            print(f"How mach is {x} + {y}")
-            Answer = int(input("enter your answer..."))
-        else:
+            else:
             x = 60
             y = random.choice(shape)
             the_exercise  = x / y
 
             print(f"How mach is {x} / {y}")
+            Answer = int(input("enter your answer...")
+        else :
+            x = random.randint(1, 100)
+            y = random.randint(1, 100)
+            the_exercise  = x + y
+
+            print(f"How mach is {x} + {y}")
             Answer = int(input("enter your answer..."))
 
         end_time = time.time()
