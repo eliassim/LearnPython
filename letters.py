@@ -138,7 +138,6 @@ def G():
     cur.lt(91.75)
     cur.fd(1)
 #good
-
 def H():
   cur.fd(10)
   cur.lt (90)
