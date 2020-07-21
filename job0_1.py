@@ -22,6 +22,8 @@ canvas1.pack()
 frame = tk.Frame(root ,bg = "white" )
 frame.place(relwidth = 0.8, relheight = 0.8, relx = 0.1, rely = 0.1)
 
+def addapp():
+    filename = filedialog.askopenfilename(initialdir = "/", title = "select file", filetypes = (("executables", "*exe"),("all files","*,*")))
 
 
 
@@ -55,9 +57,10 @@ canvas1.create_window(250, 250, window=button1)
 
 v = tk.IntVar()
 
-openfill = tk.Butten(root, text = "open fill", padx=10, pady= 5, fg="white", bg='#263D42')
+openfill = tk.Button(root, text = "open fill", padx=10, pady= 5, fg="white", bg='#263D42', command = addapp)
 openfill.pack()
-
+openApps = tk.Button(root, text = "run apps", padx=10, pady= 5, fg="white", bg='#263D42')
+openApps.pack()
 
 
 #tk.Radiobutton(root, text="One", variable=v, value=1).pack(anchor=tk.W)
