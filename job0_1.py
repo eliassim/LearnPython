@@ -9,9 +9,7 @@ import os
  
 
 root = tk.Tk()
-
- 
-
+apps = []
 my_str = 0
 
  
@@ -23,7 +21,21 @@ frame = tk.Frame(root ,bg = "white" )
 frame.place(relwidth = 0.8, relheight = 0.8, relx = 0.1, rely = 0.1)
 
 def addapp():
-    filename = filedialog.askopenfilename(initialdir = "/", title = "select file", filetypes = (("executables", "*exe"),("all files","*,*")))
+    for widget in frame.winfo_children():
+        widget.destory()
+    
+    filename = filedialog.askopenfilename(initialdir = "/", title = "select file", filetypes = (("executables", "*exe"),("all files","*.*")))
+
+    apps.append(filename)
+    print(filename)
+    for app in apps:
+        label = tk.Label(frame, text = app, bg = "gray")
+        label.pack()
+
+
+def RunApp():
+    for app in apps:
+        os.startfile(app)
 
 
 
@@ -59,7 +71,7 @@ v = tk.IntVar()
 
 openfill = tk.Button(root, text = "open fill", padx=10, pady= 5, fg="white", bg='#263D42', command = addapp)
 openfill.pack()
-openApps = tk.Button(root, text = "run apps", padx=10, pady= 5, fg="white", bg='#263D42')
+openApps = tk.Button(root, text = "run apps", padx=10, pady= 5, fg="white", bg='#263D42', command = RunApp)
 openApps.pack()
 
 
@@ -70,3 +82,7 @@ openApps.pack()
  
 
 root.mainloop()
+
+with open('save.txt', 'w') as f:
+    for app in apps:
+        f.write(app + ", ")
